@@ -1,0 +1,29 @@
+parseAmount('10'); // -> 1000
+parseAmount('10,5'); // -> 1050
+parseAmount(10,55); // -> 1055
+
+function parseAmount(str){
+  if(str.length!=4){
+    console.log(parseFloat(str*100))
+  }
+  else {str+'0'
+    console.log(parseFloat(str*100))}
+}
+
+"din" => "((("
+"recede" => "()()()"
+"Success" => ")())())"
+"(( @" => "))(("
+
+function Domagic(str) {
+  let myStr = '';
+  for (i = 0; i < str.length; i++) {
+    let count = str.toLowerCase().split(str[i].toLowerCase()).length - 1;
+    if (count > 1) {
+      myStr = myStr + ')';
+    } else {
+      myStr = myStr + '(';
+    }
+  }
+  console.log(myStr);
+}
